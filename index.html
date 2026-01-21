@@ -167,7 +167,7 @@
 </div><script>
     /* add item data */
     // title,objectid,image_thumb/small
-    var carouselItems = [ [ "Shot of a dog barking", "demo_iiif_001", "/demo/objects/small/pc002385_sm.jpg", "", "Shot of a dog barking" ], [ "A girl and her dog", "demo_iiif_002", "/demo/objects/small/pc005033_sm.jpg", "", "A girl and her dog" ], [ "Cats and dogs", "demo_iiif_003", "https://tile.loc.gov/image-services/iiif/public:gdcmassbookdig:catsdogs00unse:catsdogs00unse_0001/full/pct:100.0/0/default.jpg", "", "Cats and dogs" ], [ "Prairie dog", "demo_iiif_004", "/demo/objects/small/pc004934_sm.jpg", "", "Prairie dog" ], [ "Young Folks Pictures and Stories of Animals", "demo_iiif_005", "https://tile.loc.gov/image-services/iiif/public:gdcmassbookdig:youngfolkspictu00tenn:youngfolkspictu00tenn_0001/full/pct:100.0/0/default.jpg", "", "Young Folks Pictures and Stories of Animals" ], [ "Dog on Old Chatham Mill wheel", "demo_iiif_006", "/demo/objects/small/10965711_sm.jpg", "", "Dog on Old Chatham Mill wheel" ]];
+    var carouselItems = [ ];
     /* shuffle items */
     carouselItems.sort(function() { return 0.5 - Math.random() });
 
@@ -177,7 +177,7 @@
     var slides = "";
     var indicators = "";
     var i, itemImg, itemLink;
-    for (i=0; i < 6; i++) {
+    for (i=0; i < 0; i++) {
         // calculate item image location
         itemImg = carouselItems[i][2];
         // calculate item link
@@ -211,7 +211,7 @@
     <div class="card mb-3">
   <div class="card-body">
     <h2 class="card-title h5">Time Span</h2>
-    <p class="card-text h5">1880 to 1920
+    <p class="card-text h5">1915 to 1915
       <br><a href="/demo/timeline.html" class="btn btn-sm btn-outline-secondary mt-2">View Timeline</a>
     </p>
   </div>
@@ -224,11 +224,7 @@
         <h2 class="card-title h5">Top Subjects</h2>
         <p class="card-text">
             
-            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html#dogs">dogs</a>
-            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html#postcards">postcards</a>
-            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html#girls">girls</a>
-            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html#cats">cats</a>
-            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html#prairie%20dogs">prairie dogs</a>
+            <a class="btn btn-sm btn-primary m-1" href="/demo/browse.html"></a>
         </p>
     </div>
 </div>
@@ -240,10 +236,7 @@
         <h2 class="card-title h5">Locations</h2>
         <p class="card-text">
             
-            <a class="btn btn-sm btn-outline-secondary m-1" href="/demo/browse.html#manitoba,%20canada">manitoba, canada</a>
-            <a class="btn btn-sm btn-outline-secondary m-1" href="/demo/browse.html#wainwright,%20alberta,%20canada">wainwright, alberta, canada</a>
-            <a class="btn btn-sm btn-outline-secondary m-1" href="/demo/browse.html#new%20york">new york</a>
-            <a class="btn btn-sm btn-outline-secondary m-1" href="/demo/browse.html#vulcan,%20alberta,%20canada">vulcan, alberta, canada</a>
+            <a class="btn btn-sm btn-outline-secondary m-1" href="/demo/browse.html#manila,%20philippines">manila, philippines</a>
         </p>
     </div>
 </div>
@@ -254,9 +247,9 @@
     <h2 class="card-title h5">Objects</h2>
     <p class="card-text">
       
-      6      
+      1      
       
-      <a class="text-dark" href="/demo/browse.html#iiif">IIIF Items <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="/demo/assets/lib/cb-icons.svg#icon-iiif"/></svg></a><br>
+      <a class="text-dark" href="/demo/browse.html#iiif">IIIF Item <svg class="bi icon-sprite text-body" fill="currentColor" aria-hidden="true"><use xlink:href="/demo/assets/lib/cb-icons.svg#icon-iiif"/></svg></a><br>
       <a class="btn btn-sm btn-outline-secondary mt-2" href="/demo/data.html">View table</a>
     </p>
   </div>

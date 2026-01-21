@@ -1,6 +1,3 @@
 { "locations": [
-    { "location" : "manitoba, canada", "count" : 1, "link" : "https://nvrialp.github.io/demo/browse.html#manitoba,%20canada" },
-    { "location" : "wainwright, alberta, canada", "count" : 1, "link" : "https://nvrialp.github.io/demo/browse.html#wainwright,%20alberta,%20canada" },
-    { "location" : "new york", "count" : 1, "link" : "https://nvrialp.github.io/demo/browse.html#new%20york" },
-    { "location" : "vulcan, alberta, canada", "count" : 1, "link" : "https://nvrialp.github.io/demo/browse.html#vulcan,%20alberta,%20canada" }
+    { "location" : "manila, philippines", "count" : 1, "link" : "https://nvrialp.github.io/demo/browse.html#manila,%20philippines" }
 ]}

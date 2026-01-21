@@ -232,18 +232,8 @@
 /* add items */
 var items = [
     
-    { "date":"1912","creator":"Barrowclough Photo Card: Photographer","subject":"dogs; postcards","location":"Manitoba, Canada","identifier":"PC002385","img": "/demo/objects/thumbs/pc002385_th.jpg","template": "iiif","format": "image/jpeg","title":"Shot of a dog barking",
-        "id":"demo_iiif_001" },
-    { "date":"1920","creator":"Wainwright Studio: Publisher","subject":"girls; dogs; postcards","location":"Wainwright, Alberta, Canada","identifier":"PC005033","img": "/demo/objects/thumbs/pc005033_th.jpg","template": "iiif","format": "image/jpeg","title":"A girl and her dog",
-        "id":"demo_iiif_002" },
-    { "date":"1880","creator":"New York, Dodd, Mead & company [c1880]","subject":"cats; dogs; girls","location":"New York","identifier":"21018296","img": "https://tile.loc.gov/image-services/iiif/public:gdcmassbookdig:catsdogs00unse:catsdogs00unse_0001/full/pct:100.0/0/default.jpg","template": "iiif","format": "application/pdf","title":"Cats and dogs",
-        "id":"demo_iiif_003" },
-    { "date":"1917","creator":"Morton, W.J.: Photographer","subject":"prairie dogs","location":"Vulcan, Alberta, Canada","identifier":"PC004934","img": "/demo/objects/thumbs/pc004934_th.jpg","template": "iiif","format": "image/jpeg","title":"Prairie dog",
-        "id":"demo_iiif_004" },
-    { "date":"1887","creator":"Tenney, Abby A. (Abby Amy), 1836-1903.","subject":"dogs; animals","identifier":"unk83034008","img": "https://tile.loc.gov/image-services/iiif/public:gdcmassbookdig:youngfolkspictu00tenn:youngfolkspictu00tenn_0001/full/pct:100.0/0/default.jpg","template": "iiif","format": "application/pdf","title":"Young Folks Pictures and Stories of Animals",
-        "id":"demo_iiif_005" },
-    { "date":"1910","creator":"Beals, Jessie Tarbox, 1870-1942, American [photographer]","subject":"dogs; mills","identifier":"10965711","img": "/demo/objects/thumbs/10965711_th.jpg","template": "iiif","format": "image/jpeg","title":"Dog on Old Chatham Mill wheel",
-        "id":"demo_iiif_006" }];
+    { "date":"1915","creator":"Saleeby, M.M.","location":"Manila, Philippines","identifier":"BBNO285.0001.001","template": "iiif","format": "application/json","title":"Abaca (Manila Hemp) in the Philippines: by M.M. Saleeby",
+        "id":"abaca" }];
 
 /* 
     get a theme icon based on display_template or format 
@@ -406,7 +396,7 @@ function filterItems(arr,q) {
         }
     }
     // add number 
-    document.querySelector("#numberOf").innerHTML = filteredItems.length + " of 6 items";
+    document.querySelector("#numberOf").innerHTML = filteredItems.length + " of 1 items";
     
     // add stuff, make cards first in giant var, then add all at once to speed things up
     var cards = "";
