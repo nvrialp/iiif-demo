@@ -3,7 +3,7 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Subjects | CollectionBuilder Demo IIIF</title>
+<title>Shot of a dog barking | CollectionBuilder Demo IIIF</title>
 <link rel="shortcut icon" type="image/x-icon" href="/demo/favicon.ico">
 <!--
 
@@ -65,7 +65,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link active" href="/demo/subjects.html">Subjects</a>
+                    <a class="nav-link" href="/demo/subjects.html">Subjects</a>
                 </li>
                 
                 <li class="nav-item">
@@ -109,45 +109,276 @@
 </nav>
 
     <main id="maincontent" role="main" class="flex-shrink-0">
-      <div class="container my-4">
-  <h2 id="browse-subjects">Browse Subjects</h2>
+      <div class="container py-3">
 
-<p>Use this word cloud visualization to browse terms and subjects.
-Word size is determined by frequency and all words link to a corresponding collection search.</p>
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a class="text-dark" href="/demo/">Home</a></li>
+    <li class="breadcrumb-item"><a class="text-dark" href="/demo/browse.html">Items</a></li>
+    <li class="breadcrumb-item active text-dark" aria-current="page">Shot of a dog barking</li>
+</ol>
+    <div class="my-0 h5 small">IIIF </div>
+    <h2 class="mb-3">Shot of a dog barking 
+        <a href="#metadata" class="ms-5 btn btn-sm btn-outline-dark small">Item Info 
+            <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
+                <use xlink:href="/demo/assets/lib/cb-icons.svg#arrow-down"/>
+            </svg>
+        </a>
+    </h2>
 
-<div id="cloud-div-subject-creator" class="text-center my-4 bg-light border rounded p-2"></div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+
+        <div class="card mb-4 text-center">
+
+    
+<!-- add IIIF Universal Viewer assets from CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/universalviewer@4.0.0/dist/uv.css"/>
+<script src="https://cdn.jsdelivr.net/npm/universalviewer@4.0.0/dist/umd/UV.js"></script>
+<!-- add div for viewer -->
+<div class="uv" id="uv" style="width: 100%; height: 668px;"></div>
 <script>
-(function(){    
-    /* subject terms + count */
-    var terms = [
-        ["animals", 1], ["barrowclough photo card: photographer", 1], ["beals, jessie tarbox, 1870-1942, american [photographer]", 1], ["cats", 1], ["dogs", 5], ["girls", 2], ["mills", 1], ["morton, w.j.: photographer", 1], ["new york, dodd, mead & company [c1880]", 1], ["postcards", 2], ["prairie dogs", 1], ["tenney, abby a. (abby amy), 1836-1903.", 1], ["wainwright studio: publisher", 1]
-    ];
-
-    
-    /* calculate max size */
-    var counts = terms.map(function(obj){ return obj[1]; });
-    var countMax = counts.reduce(function(a, b) { return Math.max(a, b); });
-    var cloud = document.getElementById("cloud-div-subject-creator");
-    
-
-    function mapSize(x) { return Math.round(x * 9 / countMax + 1); }
-    /* create cloud */
-    function makeGrid(array) {
-        var i, size;
-        var items = "";
-        
-        for (i = 0; i < array.length; i++) {
-            size = mapSize(array[i][1]);
-            items += '<a class="btn btn-outline-primary m-2 tagcloud' + size + '" href="/demo/browse.html#' + encodeURIComponent(array[i][0]) + '" >' + array[i][0] + '</a>';
-        }
-        cloud.innerHTML = items;
-    }
-    makeGrid(terms);
-
-})();
+    // initialize Universal Viewer
+    var uvOptions = {
+        manifest: "/demo/objects/PC002385.json"
+        // add options here!
+    };
+    var iiif_viewer = UV.init("uv", uvOptions);
 </script>
+    
+    <div class="card-body">
+
+        <div class="btn-group" role="group" aria-label="Item options">
+    
+    <a href="/demo/timeline.html#y1912" class="btn btn-outline-primary">View on Timeline</a>
+    
+    <a href="/demo/map.html?location=56.24744925,-97.63270595&marker=demo_iiif_001" class="btn btn-outline-primary">View on Map</a>
+    <a target="_blank" rel="noopener" href="/demo/objects/PC002385.json" class="btn btn-outline-primary">
+        IIIF Manifest
+    </a>
+</div>
+ 
+
+    </div>
 
 </div>
+
+
+        </div>
+
+        <div class="col-12 col-md-10" id="metadata">
+
+            <div id="item-metadata">
+    <dl>
+        
+        <dt class="field">Title:</dt>
+        <dd class="field-value">
+            
+            Shot of a dog barking
+        </dd>
+        
+        <dt class="field">Creator:</dt>
+        <dd class="field-value">
+            
+            Barrowclough Photo Card: Photographer
+        </dd>
+        
+        <dt class="field">Date Created:</dt>
+        <dd class="field-value">
+            
+            1912
+        </dd>
+        
+        <dt class="field">Description:</dt>
+        <dd class="field-value">
+            
+            Shot of a dog barking.
+        </dd>
+        
+        <dt class="field">Subjects:</dt>
+        <dd class="field-value">
+            
+            
+            
+            <a class="me-3" href="/demo/browse.html#dogs">dogs</a>
+            
+            <a class="me-3" href="/demo/browse.html#postcards">postcards</a>
+            
+            
+        </dd>
+        
+        <dt class="field">Location:</dt>
+        <dd class="field-value">
+            
+            Manitoba, Canada
+        </dd>
+        
+        <dt class="field">Latitude:</dt>
+        <dd class="field-value">
+            
+            56.24744925
+        </dd>
+        
+        <dt class="field">Longitude:</dt>
+        <dd class="field-value">
+            
+            -97.63270595
+        </dd>
+        
+        <dt class="field">Original Source:</dt>
+        <dd class="field-value">
+            
+            Prairie Postcards Collection, University of Alberta Library
+        </dd>
+        
+        <dt class="field">Source:</dt>
+        <dd class="field-value">
+            
+            Internet Archive, <a href="https://archive.org/details/PC002385">https://archive.org/details/PC002385</a>
+        </dd>
+        
+        <dt class="field">Source Identifier:</dt>
+        <dd class="field-value">
+            
+            PC002385
+        </dd>
+        
+        <dt class="field">Type:</dt>
+        <dd class="field-value">
+            
+            Image;StillImage
+        </dd>
+        
+        <dt class="field">Format:</dt>
+        <dd class="field-value">
+            
+            image/jpeg
+        </dd>
+        
+    </dl>
+</div>
+
+        </div>
+
+        <div class="col-md-5 py-4">
+            <div class="card">
+    <div class="card-header">Source</div>
+    <div class="card-body">
+        <dl>
+            <dt>Preferred Citation:</dt>
+            <dd>"Shot of a dog barking", CollectionBuilder Demo IIIF, Center for Digital Inquiry and Learning (CDIL)</dd>
+            <dt>Reference Link:</dt>
+            <dd>https://nvrialp.github.io/demo/items/demo_iiif_001.html</dd>
+        </dl>
+    </div>
+</div>
+        </div>
+        
+        <div class="col-md-5 py-4">
+            <div class="card">
+    <div class="card-header">Rights</div>
+    <div class="card-body">
+        <dl>
+            <dt>Rights:</dt>
+            <dd>https://creativecommons.org/publicdomain/mark/1.0/</dd>
+            
+        </dl>
+    </div>
+</div>
+        </div>
+        
+    </div><div class="text-center">
+  <a class="btn btn-secondary" href="/demo/items/demo_iiif_006.html" id="prev-page-button">&laquo; Previous</a>
+  <a class="btn btn-secondary" href="/demo/browse.html">Back to Browse</a>
+  <a class="btn btn-secondary" href="/demo/items/demo_iiif_002.html" id="next-page-button">Next &raquo;</a>
+</div>
+<div id="item-nav">
+  <div class="d-none d-md-block">
+    <a class="previous btn btn-lg btn-secondary" href="/demo/items/demo_iiif_006.html">&laquo;</a>
+    <a class="next btn btn-lg btn-secondary" href="/demo/items/demo_iiif_002.html">&raquo;</a>
+  </div>
+</div>
+<script>
+  function leftArrowPressed() {
+    location.href = document.getElementById("prev-page-button").href;
+  };
+
+  function rightArrowPressed() {
+    location.href = document.getElementById("next-page-button").href;
+  };
+
+  function leftModalArrowPressed() {
+    // Get the modal element.
+    var modalshow = document.querySelector(".modal.show");
+    // If the modal exists, get the prev button element.
+    if (modalshow) {
+      const prevButton = modalshow.querySelector(".prev-child-button");
+      // If the prev button exists, click it.
+      if (prevButton) {
+        prevButton.click();
+      }
+    }
+  };
+
+  function rightModalArrowPressed() {
+    // Get the modal element.
+    var modalshow = document.querySelector(".modal.show");
+    // If the modal exists, get the prev button element.
+    if (modalshow) {
+      const nextButton = modalshow.querySelector(".next-child-button");
+      // If the prev button exists, click it.
+      if (nextButton) {
+        nextButton.click();
+      }
+    }
+  };
+
+  function isModalShown() {
+    // Get the modal element.
+    const modal = document.querySelector(".modal.show");
+
+    // Check if the modal has the "show" class.
+    return modal && modal.classList.contains("show");
+  };
+
+  function isSpotlightModalShown() {
+    // Get the modal element.
+    const spotlight = document.getElementById("spotlight");
+    // Check if the modal has the "show" class.
+    return spotlight && spotlight.classList.contains("show");
+  };
+
+
+  document.onkeydown = function (evt) {
+    if (isSpotlightModalShown()) {
+
+
+    } else if (isModalShown()) {
+      // The modal is shown.
+      evt = evt || window.event;
+      switch (evt.keyCode) {
+        case 37:
+          leftModalArrowPressed();
+            break;
+        case 39:
+          rightModalArrowPressed();
+            break;
+      }
+    }
+    else {
+      // The modal is not shown.
+      evt = evt || window.event;
+      switch (evt.keyCode) {
+        case 37:
+          leftArrowPressed();
+            break;
+        case 39:
+          rightArrowPressed();
+            break;
+      }
+    }
+
+  };
+</script></div>
     </main>
     <footer class="bg-dark pt-4 mt-auto container-fluid">
 
@@ -169,7 +400,7 @@ Word size is determined by frequency and all words link to a corresponding colle
                     </li>
                     <li class="nav-item">
                     
-                        <a class="nav-link text-light active" href="/demo/subjects.html">Subjects</a>
+                        <a class="nav-link text-light" href="/demo/subjects.html">Subjects</a>
                     </li>
                     <li class="nav-item">
                     

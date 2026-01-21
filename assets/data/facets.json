@@ -3,18 +3,31 @@
         {
             "field": "subject",
             "terms": { 
+                "dogs": 5,
+                "postcards": 2,
+                "girls": 2,
+                "cats": 1,
+                "prairie dogs": 1,
+                "animals": 1,
+                "mills": 1
             }
         },
         {
             "field": "creator",
             "terms": { 
-                "saleeby, m.m.": 1
+                "barrowclough photo card: photographer": 1,
+                "wainwright studio: publisher": 1,
+                "new york, dodd, mead & company [c1880]": 1,
+                "morton, w.j.: photographer": 1,
+                "tenney, abby a. (abby amy), 1836-1903.": 1,
+                "beals, jessie tarbox, 1870-1942, american [photographer]": 1
             }
         },
         {
             "field": "format",
             "terms": { 
-                "application/json": 1
+                "image/jpeg": 4,
+                "application/pdf": 2
             }
         }
         
